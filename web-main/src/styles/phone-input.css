@@ -1,0 +1,57 @@
+:root {
+	--react-international-phone-border-radius: 0.5rem;
+	--react-international-phone-border-color: rgba(255, 255, 255, 0.12);
+	--react-international-phone-background-color: #120f22;
+	--react-international-phone-text-color: #f4f0ff;
+	--react-international-phone-font-size: 1rem;
+	--react-international-phone-height: 48px;
+	--react-international-phone-padding: 0 1rem;
+
+	--react-international-phone-country-selector-background-color: #120f22;
+	--react-international-phone-country-selector-border-color: rgba(
+		255,
+		255,
+		255,
+		0.12
+	);
+	--react-international-phone-country-selector-border-radius: 0.5rem;
+	--react-international-phone-country-selector-padding: 0 1rem;
+	--react-international-phone-country-selector-arrow-color: #f4f0ff;
+
+	--react-international-phone-dropdown-item-background-color-hover: #120f22;
+	--react-international-phone-selected-dropdown-item-background-color: #120f22;
+}
+
+/* react-international-phone */
+.phone-input-container {
+	/* Container styles */
+	display: flex;
+	align-items: center;
+}
+
+.phone-input-container .react-international-phone-input {
+	width: 100%;
+}
+
+.phone-input-container .react-international-phone-country-selector {
+	height: 48px; /* Match input height */
+}
+
+/* Optional: Add focus styles to match your design system */
+.phone-input-container .react-international-phone-input:focus {
+	border-color: white;
+}
+
+/* Target the country selector button when the input container is focused-within */
+.phone-input-container:focus-within
+	.react-international-phone-country-selector-button {
+	border-color: white;
+}
+
+.react-international-phone-country-selector-button {
+	padding: 0 16px !important;
+}
+
+.react-international-phone-country-selector-button:hover {
+	background-color: transparent;
+}

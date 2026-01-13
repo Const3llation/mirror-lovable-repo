@@ -1,0 +1,108 @@
+@keyframes diamondPulse {
+  0% {
+    opacity: 0.8;
+    filter: brightness(0.8) drop-shadow(0 0 4px rgba(255, 255, 255, 0.1));
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1) drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+  }
+  100% {
+    opacity: 0.8;
+    filter: brightness(0.8) drop-shadow(0 0 4px rgba(255, 255, 255, 0.1));
+  }
+}
+
+@keyframes diamondGlow {
+  0% {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.1));
+  }
+  50% {
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.2));
+  }
+  100% {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.1));
+  }
+}
+
+.diamondContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.svgWrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* SVG on top */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.diamondIcon {
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.05));
+}
+
+.imageWrapper {
+  position: absolute;
+  z-index: 5; /* Image behind */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageWrapper img {
+  object-fit: contain;
+}
+
+.diamondGroup {
+  transform-origin: center;
+  animation: diamondPulse 4s infinite ease-in-out;
+}
+
+.first {
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+.second {
+  opacity: 0.5;
+  animation: diamondGlow 3s infinite ease-in-out;
+}
+
+.third {
+  opacity: 0.6;
+  animation: diamondGlow 3s infinite ease-in-out 1s;
+}
+
+.center {
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+/* Hover effects */
+.diamondIcon:hover .first {
+  opacity: 0.5;
+}
+
+.diamondIcon:hover .second {
+  opacity: 0.6;
+}
+
+.diamondIcon:hover .third {
+  opacity: 0.7;
+}
+
+.diamondIcon:hover .center {
+  opacity: 0.9;
+} 

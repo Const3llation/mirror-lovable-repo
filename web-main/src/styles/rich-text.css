@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rich-text-component {
+    /* Base text color for all elements */
+    * {
+        @apply text-text-300;
+    }
+
+    /* Heading Styles */
+    h1 {
+        @apply text-4xl font-semibold leading-tight text-text-100;
+        @apply md:text-5xl md:leading-tight;
+        @apply lg:text-5xl lg:leading-tight;
+        @apply xl:text-6xl xl:leading-snug;
+    }
+
+    h2 {
+        @apply text-3xl font-semibold leading-normal text-text-100;
+        @apply md:text-4xl md:leading-snug;
+        @apply lg:text-4xl lg:leading-snug;
+        @apply xl:text-5xl xl:leading-snug;
+    }
+
+    h3 {
+        @apply text-2xl font-semibold leading-normal text-text-100;
+        @apply md:text-3xl md:leading-normal;
+        @apply lg:text-3xl lg:leading-normal;
+        @apply xl:text-3xl xl:leading-normal;
+    }
+
+    h4 {
+        @apply text-xl font-semibold leading-normal text-text-100;
+        @apply md:text-2xl md:leading-normal;
+        @apply lg:text-2xl lg:leading-normal;
+        @apply xl:text-2xl xl:leading-normal;
+    }
+
+    h5 {
+        @apply text-base font-medium leading-normal text-text-100;
+        @apply md:text-lg md:leading-normal;
+        @apply lg:text-xl lg:leading-normal;
+        @apply xl:text-xl xl:leading-normal;
+    }
+
+    h6 {
+        @apply text-sm font-medium leading-normal text-text-100;
+        @apply md:text-base md:leading-normal;
+        @apply lg:text-base lg:leading-normal;
+        @apply xl:text-lg xl:leading-normal;
+    }
+
+    /* Paragraph - using 16-regular style */
+    p {
+        @apply text-base font-normal leading-normal;
+        @apply md:text-base md:font-normal md:leading-normal;
+        @apply lg:text-base lg:font-normal lg:leading-normal;
+        @apply xl:text-base xl:font-normal xl:leading-normal;
+        @apply mb-4;
+    }
+
+    /* Links - using 16-medium style with additional link styling */
+    a {
+        @apply text-base font-medium leading-normal text-primary-100;
+        @apply md:text-base md:font-medium md:leading-normal;
+        @apply lg:text-base lg:font-medium lg:leading-normal;
+        @apply xl:text-base xl:font-medium xl:leading-normal;
+        @apply hover:text-primary-150 transition-colors duration-200;
+        @apply underline;
+    }
+
+    /* Strong/Bold text - using 16-bold style */
+    strong, b {
+        @apply text-base font-bold leading-normal text-text-100;
+        @apply md:text-base md:font-bold md:leading-normal;
+        @apply lg:text-base lg:font-bold lg:leading-normal;
+        @apply xl:text-base xl:font-bold xl:leading-normal;
+    }
+
+    /* Emphasized text - using 16-medium style with italic */
+    em, i {
+        @apply text-base font-medium italic leading-normal;
+        @apply md:text-base md:font-medium md:leading-normal;
+        @apply lg:text-base lg:font-medium lg:leading-normal;
+        @apply xl:text-base xl:font-medium xl:leading-normal;
+    }
+
+    /* Lists */
+    ul {
+        @apply list-disc pl-5 mb-4;
+    }
+
+    ol {
+        @apply list-decimal pl-5 mb-4;
+    }
+
+    li {
+        @apply text-base font-normal leading-normal;
+        @apply md:text-base md:font-normal md:leading-normal;
+        @apply lg:text-base lg:font-normal lg:leading-normal;
+        @apply xl:text-base xl:font-normal xl:leading-normal;
+        @apply mb-2;
+    }
+
+    /* Quote blocks - using 18-medium style */
+    blockquote {
+        @apply text-lg font-medium leading-relaxed pl-4 border-l-4 border-primary-100 my-6;
+        @apply md:text-lg md:font-medium md:leading-relaxed;
+        @apply lg:text-lg lg:font-medium lg:leading-relaxed;
+        @apply xl:text-lg xl:font-medium xl:leading-relaxed;
+    }
+
+    /* Code blocks - using 14-regular with monospace */
+    code {
+        @apply text-sm font-normal leading-normal font-mono bg-background-input px-2 py-1 rounded;
+        @apply md:text-sm md:font-normal md:leading-normal;
+        @apply lg:text-sm lg:font-normal lg:leading-normal;
+        @apply xl:text-sm xl:font-normal xl:leading-normal;
+    }
+
+    pre {
+        @apply bg-background-input p-4 rounded-lg mb-4 overflow-x-auto;
+    }
+
+    pre code {
+        @apply bg-transparent p-0;
+    }
+
+    /* Small text - using 12-regular style */
+    small {
+        @apply text-xs font-normal leading-tight;
+        @apply md:text-xs md:font-normal md:leading-tight;
+        @apply lg:text-xs lg:font-normal lg:leading-tight;
+        @apply xl:text-xs xl:font-normal xl:leading-tight;
+    }
+
+    /* Spacing rules */
+    h1, h2, h3, h4, h5, h6 {
+        @apply mt-9 mb-6;
+    }
+
+    h1:first-of-type,
+    h2:first-of-type,
+    h3:first-of-type,
+    h4:first-of-type,
+    h5:first-of-type,
+    h6:first-of-type {
+        @apply mt-0;
+    }
+
+    p:last-child,
+    ul:last-child,
+    ol:last-child {
+        @apply mb-0;
+    }
+
+    /* Table styles */
+    table {
+        @apply w-full border-collapse mb-4;
+    }
+
+    th {
+        @apply text-base font-bold leading-normal text-text-100 p-2 border border-stroke-25;
+        @apply md:text-base md:font-bold md:leading-normal;
+        @apply lg:text-base lg:font-bold lg:leading-normal;
+        @apply xl:text-base xl:font-bold xl:leading-normal;
+    }
+
+    td {
+        @apply text-base font-normal leading-normal p-2 border border-stroke-25;
+        @apply md:text-base md:font-normal md:leading-normal;
+        @apply lg:text-base lg:font-normal lg:leading-normal;
+        @apply xl:text-base xl:font-normal xl:leading-normal;
+    }
+}

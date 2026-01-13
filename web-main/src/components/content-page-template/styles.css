@@ -1,0 +1,11 @@
+.rich-text-privacy-policy {
+    h1 {
+        color: red;
+    }
+    p, ul {
+        color: white;
+    }
+    ul {
+        list-style: circle;
+    }
+}
